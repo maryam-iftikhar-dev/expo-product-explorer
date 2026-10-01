@@ -34,8 +34,17 @@ export default function HomeScreen() {
       <SafeAreaView style={styles.safeArea}>
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
+
           <ThemedText type="title" style={styles.title}>
             Welcome to&nbsp;Expo
+          </ThemedText>
+
+          <ThemedText type="subtitle" style={styles.studentName}>
+            Maryam Iftikhar
+          </ThemedText>
+
+          <ThemedText type="default" style={styles.rollNumber}>
+            Roll No: 23I3046
           </ThemedText>
         </ThemedView>
 
@@ -48,7 +57,9 @@ export default function HomeScreen() {
             title="Try editing"
             hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
           />
+
           <HintRow title="Dev tools" hint={getDevMenuHint()} />
+
           <HintRow
             title="Fresh start"
             hint={<ThemedText type="code">npm run reset-project</ThemedText>}
@@ -67,6 +78,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
   },
+
   safeArea: {
     flex: 1,
     paddingHorizontal: Spacing.four,
@@ -75,6 +87,7 @@ const styles = StyleSheet.create({
     paddingBottom: BottomTabInset + Spacing.three,
     maxWidth: MaxContentWidth,
   },
+
   heroSection: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -82,12 +95,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
   },
+
   title: {
     textAlign: 'center',
   },
+
+  studentName: {
+    textAlign: 'center',
+    marginTop: Spacing.two,
+  },
+
+  rollNumber: {
+    textAlign: 'center',
+  },
+
   code: {
     textTransform: 'uppercase',
   },
+
   stepContainer: {
     gap: Spacing.three,
     alignSelf: 'stretch',
